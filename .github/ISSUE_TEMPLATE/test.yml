@@ -1,0 +1,75 @@
+name: Test
+description: 测试用例、验收测试、回归测试
+title: "[Test] "
+labels: ["type: test"]
+body:
+  - type: textarea
+    id: scope
+    attributes:
+      label: 测试范围
+      description: 要测试什么？哪些模块、函数或行为？
+    validations:
+      required: true
+
+  - type: textarea
+    id: type
+    attributes:
+      label: 测试类型
+      value: |
+        - [ ] 单元测试
+        - [ ] 集成测试
+        - [ ] 回归测试
+        - [ ] 性能测试 / Benchmark
+        - [ ] 构建验证（cmake configure + build）
+        - [ ] 其他：
+
+  - type: textarea
+    id: cases
+    attributes:
+      label: 测试用例
+      value: |
+        1.
+        2.
+        3.
+
+  - type: textarea
+    id: commands
+    attributes:
+      label: 运行命令
+      description: 如何运行这些测试？
+      value: |
+        ```bash
+        cmake --preset default
+        cmake --build cmake-build-default
+        ctest --test-dir cmake-build-default
+        ```
+
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: 验收标准
+      value: |
+        - [ ] 全部用例通过
+        - [ ] 无内存泄漏（如适用）
+        - [ ] 无未定义行为（如适用）
+
+  - type: textarea
+    id: docs
+    attributes:
+      label: 相关文档
+      value: |
+        - `docs/github-mcp-workflow.md`
+
+  - type: textarea
+    id: next-action
+    attributes:
+      label: 下一步
+    validations:
+      required: true
+
+  - type: textarea
+    id: resume-note
+    attributes:
+      label: 恢复现场
+    validations:
+      required: true

@@ -1,0 +1,64 @@
+name: Experiment
+description: 实验验证、PoC、性能压测
+title: "[Experiment] "
+labels: ["type: experiment"]
+body:
+  - type: textarea
+    id: goal
+    attributes:
+      label: 实验目标
+      description: 要验证什么假设或方案？
+    validations:
+      required: true
+
+  - type: textarea
+    id: setup
+    attributes:
+      label: 实验设计
+      description: 如何设计实验？对照组是什么？
+      value: |
+        实验组：
+        对照组：
+        测量指标：
+
+  - type: textarea
+    id: scope
+    attributes:
+      label: 范围
+      description: 包括什么？不包括什么？
+
+  - type: textarea
+    id: criteria
+    attributes:
+      label: 判定标准
+      description: 什么结果算"通过"？什么算"否决"？
+
+  - type: textarea
+    id: output
+    attributes:
+      label: 输出物
+      value: |
+        - [ ] 实验数据
+        - [ ] 结论（通过 / 否决 / 需更多数据）
+        - [ ] 后续行动计划
+
+  - type: textarea
+    id: docs
+    attributes:
+      label: 相关文档
+      value: |
+        - `docs/github-mcp-workflow.md`
+
+  - type: textarea
+    id: next-action
+    attributes:
+      label: 下一步
+    validations:
+      required: true
+
+  - type: textarea
+    id: resume-note
+    attributes:
+      label: 恢复现场
+    validations:
+      required: true

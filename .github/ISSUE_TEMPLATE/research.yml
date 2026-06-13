@@ -1,0 +1,68 @@
+name: Research
+description: 技术调研、方案设计、行为验证
+title: "[Research] "
+labels: ["type: research"]
+body:
+  - type: textarea
+    id: background
+    attributes:
+      label: 背景
+      description: 为什么需要这次调研？
+    validations:
+      required: true
+
+  - type: textarea
+    id: question
+    attributes:
+      label: 调研问题
+      description: 需要回答什么问题？
+    validations:
+      required: true
+
+  - type: textarea
+    id: method
+    attributes:
+      label: 调研方式
+      value: |
+        - [ ] 文档 / 标准阅读
+        - [ ] 代码实验 / PoC
+        - [ ] 性能对比 / Benchmark
+        - [ ] 方案对比
+        - [ ] 其他：
+
+  - type: textarea
+    id: scope
+    attributes:
+      label: 范围
+      description: 包括什么？不包括什么？
+
+  - type: textarea
+    id: output
+    attributes:
+      label: 输出物
+      value: |
+        - [ ] 研究结论（写入对应 docs 目录）
+        - [ ] 代码 PoC（如需要）
+        - [ ] 对现有架构的影响评估
+        - [ ] 后续 Issue 建议
+
+  - type: textarea
+    id: docs
+    attributes:
+      label: 相关文档
+      value: |
+        - `docs/github-mcp-workflow.md`
+
+  - type: textarea
+    id: next-action
+    attributes:
+      label: 下一步
+    validations:
+      required: true
+
+  - type: textarea
+    id: resume-note
+    attributes:
+      label: 恢复现场
+    validations:
+      required: true

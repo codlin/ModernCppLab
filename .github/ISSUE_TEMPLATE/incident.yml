@@ -1,0 +1,82 @@
+name: Incident
+description: 运行事故、构建失败、严重异常复盘
+title: "[Incident] "
+labels: ["type: incident"]
+body:
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: 发生了什么
+      description: 简要描述事故现象。
+    validations:
+      required: true
+
+  - type: textarea
+    id: timeline
+    attributes:
+      label: 时间线
+      value: |
+        发现时间：
+        影响起止：
+        修复时间：
+
+  - type: textarea
+    id: impact
+    attributes:
+      label: 影响范围
+      value: |
+        影响功能：
+        影响构建：
+        影响数据：
+        是否对外可见：
+
+  - type: textarea
+    id: root-cause
+    attributes:
+      label: 根因分析
+      description: 为什么会发生？
+
+  - type: textarea
+    id: fix
+    attributes:
+      label: 修复措施
+      description: 做了什么来修复？
+
+  - type: textarea
+    id: prevention
+    attributes:
+      label: 预防措施
+      value: |
+        - [ ] 添加测试
+        - [ ] 添加编译警告 / 静态检查
+        - [ ] 添加 CI 检查
+        - [ ] 更新文档
+        - [ ] 重构代码
+        - [ ] 其他：
+
+  - type: textarea
+    id: followup
+    attributes:
+      label: 后续 Issue
+      description: 需要创建哪些后续 Issue？
+
+  - type: textarea
+    id: docs
+    attributes:
+      label: 相关文档
+      value: |
+        - `docs/github-mcp-workflow.md`
+
+  - type: textarea
+    id: next-action
+    attributes:
+      label: 下一步
+    validations:
+      required: true
+
+  - type: textarea
+    id: resume-note
+    attributes:
+      label: 恢复现场
+    validations:
+      required: true

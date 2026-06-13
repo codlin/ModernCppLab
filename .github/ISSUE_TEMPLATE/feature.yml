@@ -1,0 +1,105 @@
+name: Feature
+description: 新功能或能力建设
+title: "[Feature] "
+labels: ["type: feature"]
+body:
+  - type: textarea
+    id: background
+    attributes:
+      label: 背景
+      description: 为什么要做这个功能？
+    validations:
+      required: true
+
+  - type: textarea
+    id: goal
+    attributes:
+      label: 目标
+      description: 完成后应该达到什么效果？
+    validations:
+      required: true
+
+  - type: textarea
+    id: scope
+    attributes:
+      label: 范围
+      description: 包括什么？不包括什么？
+      value: |
+        包括：
+        -
+
+        不包括：
+        -
+    validations:
+      required: true
+
+  - type: textarea
+    id: design
+    attributes:
+      label: 设计方案
+      description: 准备如何实现？涉及哪些模块？
+      value: |
+        初步方案：
+        -
+
+        影响模块（本项目为 C++17 / CMake 项目）：
+        - `include/`（头文件）
+        - `src/`（源文件）
+        - `CMakeLists.txt`
+        - `CMakePresets.json`
+        - `tests/`（如存在）
+
+  - type: textarea
+    id: docs
+    attributes:
+      label: 相关文档
+      value: |
+        - `docs/github-mcp-workflow.md`
+
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: 验收标准
+      value: |
+        - [ ]
+        - [ ]
+        - [ ]
+    validations:
+      required: true
+
+  - type: textarea
+    id: risks
+    attributes:
+      label: 风险
+      value: |
+        兼容性风险：
+        构建风险（CMake / 编译器）：
+        ABI / API 风险：
+        内存安全风险：
+        异常安全风险：
+
+  - type: textarea
+    id: files
+    attributes:
+      label: 关键文件
+      value: |
+        - `include/...`
+        - `src/...`
+        - `tests/...`（如涉及）
+        - `CMakeLists.txt`（如涉及）
+
+  - type: textarea
+    id: next-action
+    attributes:
+      label: 下一步
+      description: 下次继续时先做什么？
+    validations:
+      required: true
+
+  - type: textarea
+    id: resume-note
+    attributes:
+      label: 恢复现场
+      description: 下次或中断后回来时，先看哪里？
+    validations:
+      required: true

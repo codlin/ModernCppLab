@@ -1,0 +1,93 @@
+name: Bug
+description: 缺陷、异常行为、编译/运行错误
+title: "[Bug] "
+labels: ["type: bug"]
+body:
+  - type: textarea
+    id: symptom
+    attributes:
+      label: 现象
+      description: 看到的异常是什么？
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: 期望行为
+      description: 正确行为应该是什么？
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: 复现步骤
+      value: |
+        1.
+        2.
+        3.
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: 环境
+      value: |
+        OS：
+        Compiler（MSVC / GCC / Clang + 版本）：
+        CMake version：
+        Build config（Debug / Release）：
+        Build preset（`cmake --preset default`）：
+        Version / Commit：
+
+  - type: textarea
+    id: impact
+    attributes:
+      label: 影响范围
+      value: |
+        影响模块（include / src）：
+        影响功能：
+        影响构建：
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: 日志 / 编译输出 / 证据
+      description: 贴出编译错误、运行日志、崩溃堆栈或测试失败信息。
+
+  - type: textarea
+    id: docs
+    attributes:
+      label: 相关文档
+      value: |
+        - `docs/github-mcp-workflow.md`
+
+  - type: textarea
+    id: suspected-cause
+    attributes:
+      label: 初步判断
+      description: 可能是什么原因？
+
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: 修复验收标准
+      value: |
+        - [ ] 编译通过（`cmake --build cmake-build-default`）
+        - [ ] 运行正常
+        - [ ] （如有测试）`ctest` 通过
+        - [ ]
+
+  - type: textarea
+    id: next-action
+    attributes:
+      label: 下一步
+    validations:
+      required: true
+
+  - type: textarea
+    id: resume-note
+    attributes:
+      label: 恢复现场
+    validations:
+      required: true

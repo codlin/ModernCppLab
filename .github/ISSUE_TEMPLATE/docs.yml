@@ -1,0 +1,59 @@
+name: Docs
+description: 文档新增、整理、同步、迁移
+title: "[Docs] "
+labels: ["type: docs"]
+body:
+  - type: textarea
+    id: goal
+    attributes:
+      label: 目标
+      description: 要做什么文档工作？
+    validations:
+      required: true
+
+  - type: textarea
+    id: scope
+    attributes:
+      label: 范围
+      value: |
+        涉及文档：
+        - `docs/...`
+        - `README.md`
+        - `CLAUDE.md`
+        - `AGENTS.md`
+
+  - type: textarea
+    id: type
+    attributes:
+      label: 文档类型
+      value: |
+        - [ ] Discussion（讨论/草稿）
+        - [ ] Architecture（架构/设计）
+        - [ ] Planning（计划）
+        - [ ] Refactoring（重构方案）
+        - [ ] Review（验收/审查）
+        - [ ] Bugfix（问题分析）
+        - [ ] Knowledge（知识/研究）
+
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: 完成标准
+      value: |
+        - [ ] 文档已写入正确目录
+        - [ ] 与现有文档无冲突
+        - [ ] 相关 Issue / PR 已引用
+
+  - type: textarea
+    id: next-action
+    attributes:
+      label: 下一步
+    validations:
+      required: true
+
+  - type: textarea
+    id: resume-note
+    attributes:
+      label: 恢复现场
+    validations:
+      required: true

@@ -1,0 +1,14 @@
+# 00-discussion — 历史讨论与方案推演
+
+用途：历史讨论、方案推演、需求讨论、AI 生成草稿、会议记录、临时想法。
+
+性质：
+- 参考资料，历史上下文
+- 可用于理解项目演进
+- 不可直接视为最终设计事实
+
+规则：
+1. 可以阅读，用于理解为什么这么设计。
+2. 不应直接以 discussion 文档覆盖 architecture 文档。
+3. 如果 discussion 与 architecture 冲突，优先采用 architecture。
+4. 如果 discussion 中有有价值但未沉淀的内容，应整理到 architecture、planning 或 knowledge。
